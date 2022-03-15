@@ -30,7 +30,7 @@ void main(List<String> arguments) {
 
   //Verkefni 3
   print("Verkefni 4.3");
-  
+
   int input = 0;
   List<int> numberList = [];
   do
@@ -43,4 +43,18 @@ void main(List<String> arguments) {
   numberList.removeAt(numberList.length-1); //Fjarlægir null úr listanum
   print("The highest number you input was: " +numberList.reduce(max).toString());
   print("The lowest number you input was: "+numberList.reduce(min).toString());
+
+  //Verkefni 4
+  print("Verkefni 4.4");
+
+  String sInput;
+  List<String> sList = [];
+  do {
+    print("Input some text: ");
+    sInput = stdin.readLineSync();
+    sList.add(sInput);
+  } while (sInput != "");
+  sList.removeAt(sList.length-1);
+  print(sList.reversed);
+
 }
