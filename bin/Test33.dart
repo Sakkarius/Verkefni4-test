@@ -1,3 +1,7 @@
+// ignore_for_file: omit_local_variable_types, prefer_single_quotes
+
+import 'dart:io';
+import 'dart:math';
 
 void main(List<String> arguments) {
   //Verkefni 1
@@ -23,4 +27,20 @@ void main(List<String> arguments) {
       }
     }
   print("$counter numbers between 20 and 80!");
+
+  //Verkefni 3
+  print("Verkefni 4.3");
+  
+  int input = 0;
+  List<int> numberList = [];
+  do
+  {
+    print("Input a number: ");
+    input = int.tryParse(stdin.readLineSync());
+    numberList.add(input);
+  }
+  while (input != null);
+  numberList.removeAt(numberList.length-1); //Fjarlægir null úr listanum
+  print("The highest number you input was: " +numberList.reduce(max).toString());
+  print("The lowest number you input was: "+numberList.reduce(min).toString());
 }
